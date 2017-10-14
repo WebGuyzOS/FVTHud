@@ -1,10 +1,4 @@
-//
-//  AppDelegate.swift
-//  FVT_Hud
-//
-//  Created by IPS on 14/10/17.
-//  Copyright © 2017 IPS. All rights reserved.
-//
+
 
 import UIKit
 
@@ -15,7 +9,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+     
+        FVTHud.showNetworkIndicator = true // By default its true
+        FVTHud.hudContainderSize = 130  // By default its 160
+        FVTHud.disablerView.backgroundColor = UIColor.init(white: 0.5, alpha: 0.5) // Covers hud conainer do disable the user interaction
+        FVTHud.hudContainder.backgroundColor = .gray
+        FVTHud.loadingIndicator.activityIndicatorViewStyle = .whiteLarge // By default its whiteLarge
+        FVTHud.hudTextsLabel.isHidden = false // Hide "please wait" text if not needed
+        FVTHud.hudContainder.image = UIImage(named:"image") // your desired image , By default it is nil
+        
+        
+        //NOTE : You can change these value anytime at anyplace in the project
+        
+        
         return true
     }
 
