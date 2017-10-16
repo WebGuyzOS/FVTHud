@@ -9,17 +9,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-     
-        FVTHud.showNetworkIndicator = true // By default its true
-        FVTHud.hudContainderSize = 130  // By default its 160
+        
+        FVTHud.showNetworkIndicator = true // By default its true, At the top or on the status bar there is default network indicator
+        
+        FVTHud.hudContainderSize = 130  // By default its 160 , Size of container which holds all stuff
+        
         FVTHud.disablerView.backgroundColor = UIColor.init(white: 0.5, alpha: 0.5) // Covers hud conainer do disable the user interaction
-        FVTHud.hudContainder.backgroundColor = .gray
+        
+        FVTHud.hudContainder.backgroundColor = .lightGray // Background color of entire hud
+        
+        //  FVTHud.hudContainder.image = UIImage(named:"image") // your desired image , By default it is nil,Background image of entire hud
+        
         FVTHud.loadingIndicator.activityIndicatorViewStyle = .whiteLarge // By default its whiteLarge
+        
         FVTHud.hudTextsLabel.isHidden = false // Hide "please wait" text if not needed
-        FVTHud.hudContainder.image = UIImage(named:"image") // your desired image , By default it is nil
         
+        FVTHud.rotationRoundBackground.backgroundColor = .clear // This is the view which is containing the rotating line
         
-        //NOTE : You can change these value anytime at anyplace in the project
+        FVTHud.rotationLineWidth = 3 // line which is rotating
+        
+        FVTHud.rotaionGapPercentage = 90  // The gap which appears in round rotating line
+        
+        FVTHud.rotationSpeedTime = 1.5 // Speed or time interval of rotation
+        
+        FVTHud.rotationSizeRatio = 2 // This is the size ration of round rotating line, By default it is half of total hud size that is hudContainderSize
+        
+        FVTHud.rotationLineColor = .black // Color of rotating line
+        
+        FVTHud.rotationLineGapColor = .clear  // Color of the gap which appears in round rotating line
+        
+        FVTHud.hudTextsLabel.font = UIFont.systemFont(ofSize: 14) // Font of text which tells "Please wait..."
         
         
         return true

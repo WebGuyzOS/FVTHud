@@ -56,8 +56,8 @@
 		A1D86D251F921681003132BA /* FVT_Hud */ = {
 			isa = PBXGroup;
 			children = (
-				A1D86D261F921681003132BA /* AppDelegate.swift */,
 				A1D86D281F921681003132BA /* ViewController.swift */,
+				A1D86D261F921681003132BA /* AppDelegate.swift */,
 				A13FAAD71F921729005FFF3B /* FVTHud.swift */,
 				A13FAAD91F92175E005FFF3B /* Main.storyboard */,
 				A1D86D2D1F921681003132BA /* Assets.xcassets */,
